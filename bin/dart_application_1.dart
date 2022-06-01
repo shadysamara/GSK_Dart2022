@@ -2,7 +2,34 @@ import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
 typedef String GskFunction(String x);
+enum UserType { admin, client, seller }
 void main(List<String> arguments) {
+  checkUser(UserType user) {
+    //condition?if true:if false
+    String result = user == UserType.admin
+        ? 'hello admin'
+        : user == UserType.client
+            ? 'hello client'
+            : 'hello seller';
+    // if (user == UserType.admin) {
+    //   print('hello admin');
+    // } else if (user == UserType.client) {
+    //   print('hello client');
+    // } else {
+    //   print('hello seller');
+    // }
+  }
+
+  checkUser(UserType.admin);
+  /*
+define function called checkUser
+make the function recieve the user as parameter
+check if the passed user is admin print hello admin
+if the passed user is client print hello client, you can buy what you want here
+if the passed user is seller print hello seller, you can sell your products here
+
+
+  */
   String capetilizeFirstLeter(String name) {
     return name[0].toUpperCase() + name.substring(1);
   }
