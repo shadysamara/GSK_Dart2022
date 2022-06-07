@@ -1,11 +1,51 @@
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
+import 'Person.dart';
+import 'dummy_data.dart';
+
 typedef String GskFunction(String x);
 enum UserType { admin, client, seller }
 void main(List<String> arguments) {
-  checkUser(UserType user) {
-    //condition?if true:if false
+  /*
+create class called student and define this attributes to it
+- fullName as string
+- gpa as double
+- level as enum and give it this values (first, second, third, fourth, graduated)
+- define function called getStudentGpa that return string as the following
+   - if the gpa larger than 90 return excellent
+   - if the gpa larger than 80 return vgood
+   - if the gpa larger than 70 return good
+   - if the gpa larger than 60 return poor
+   - else return failed
+- create instance from student class
+- create costructor for student class and assign values for each attribute using
+this constructor
+- create a new constructor called student.fromMap
+- check if your constructor work correctly by pass map to it
+  */
+  // Person person3 = Person()
+  //   ..fName = "omar"
+  //   ..lName = "ahmed"
+  //   ..gender = Gender.male
+  //   ..ageInYears = 9.7;
+
+  // Person person2 = Person();
+  // person2.fName = "omar";
+  // person2.lName = "ahmed";
+  // person2.ageInYears = 9.7;
+  // person2.gender = Gender.male;
+  List<Person> persons = students.map((e) => Person.fromMap(e)).toList();
+  print(persons.length);
+
+  // Person person1 = Person('omar', 'ahmed', Gender.male, 9.5);
+  // person1.fName = "omar";
+  // person1.lName = "ahmed";
+  // person1.ageInYears = 9.7;
+  // person1.gender = Gender.male;
+  // print(person1.fName);
+  /* checkUser(UserType user) {
+    //condition?if true:if
     String result = user == UserType.admin
         ? 'hello admin'
         : user == UserType.client
@@ -21,6 +61,7 @@ void main(List<String> arguments) {
   }
 
   checkUser(UserType.admin);
+  */
   /*
 define function called checkUser
 make the function recieve the user as parameter
@@ -30,6 +71,7 @@ if the passed user is seller print hello seller, you can sell your products here
 
 
   */
+  /*
   String capetilizeFirstLeter(String name) {
     return name[0].toUpperCase() + name.substring(1);
   }
@@ -56,13 +98,13 @@ if the passed user is seller print hello seller, you can sell your products here
 
   print(formatFullName(
       capetilizeFirstLeter, formatMiddleName, 'shady ahmed mohammed'));
-
+*/
   //positional parameters
 
 // optional parameters
 // optional positional parameters
 // optional named parameters
-  int summation(int x, {int y = 9}) {
+  /*int summation(int x, {int y = 9}) {
     return x + y;
   }
 
@@ -82,7 +124,7 @@ if the passed user is seller print hello seller, you can sell your products here
   }
 
   print(multiply(5, 6));
-
+*/
 /*
 // signeture
 1- return type
