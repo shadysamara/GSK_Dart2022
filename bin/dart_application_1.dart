@@ -1,12 +1,39 @@
+import 'dart:developer';
+
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
 
 import 'Person.dart';
+import 'Student.dart';
+import 'Teacher.dart';
 import 'dummy_data.dart';
 
 typedef String GskFunction(String x);
 enum UserType { admin, client, seller }
 void main(List<String> arguments) {
+  Student student = Student.fromMap({
+    "first_name": "shaker",
+    "last_name": "ahmed",
+    "isMale": true,
+    "age": 8.5,
+    "gpa": 99
+  });
+  Teacher teacher1 = Teacher('ahmed', 'hassan', 700);
+  Teacher teacher2 = Teacher('ahmed', 'hassan', 700);
+  print(teacher1 == teacher2); // => true operator overiding
+
+/*
+define abstract method in student class called getHomework
+*/
+
+// student.
+/*
+- define toMap method in student class
+- define new class called graduatedStudent and make it subclass for student
+
+
+
+*/
   /*
 create class called student and define this attributes to it
 - fullName as string
@@ -35,8 +62,8 @@ this constructor
   // person2.lName = "ahmed";
   // person2.ageInYears = 9.7;
   // person2.gender = Gender.male;
-  List<Person> persons = students.map((e) => Person.fromMap(e)).toList();
-  print(persons.length);
+  // List<Person> persons = students.map((e) => Person.fromMap(e)).toList();
+  // print(persons.first.toMap().toString());
 
   // Person person1 = Person('omar', 'ahmed', Gender.male, 9.5);
   // person1.fName = "omar";
