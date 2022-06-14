@@ -1,7 +1,9 @@
+import 'general_class.dart';
+
 enum Gender { male, female }
 enum Level { excellent, vgood, good, poor, failed }
 // we can inherit abstract class but we can not make instance from it
-abstract class Person {
+abstract class Person extends GeneralClass {
   late String fName;
   late String lName;
   late Gender gender;

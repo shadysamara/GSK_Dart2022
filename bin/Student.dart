@@ -1,6 +1,6 @@
 import 'Person.dart';
 
-class Student extends Person {
+class Student extends Person{
   late num gpa;
   Student(this.gpa, String firstName, String lastName, Gender gender,
       double ageInYears)

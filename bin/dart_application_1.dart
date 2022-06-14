@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:dart_application_1/dart_application_1.dart'
     as dart_application_1;
@@ -7,20 +8,63 @@ import 'Person.dart';
 import 'Student.dart';
 import 'Teacher.dart';
 import 'dummy_data.dart';
+import 'general_class.dart';
+import 'human.dart';
 
 typedef String GskFunction(String x);
 enum UserType { admin, client, seller }
+// mixins
 void main(List<String> arguments) {
-  Student student = Student.fromMap({
-    "first_name": "shaker",
-    "last_name": "ahmed",
-    "isMale": true,
-    "age": 8.5,
-    "gpa": 99
-  });
-  Teacher teacher1 = Teacher('ahmed', 'hassan', 700);
-  Teacher teacher2 = Teacher('ahmed', 'hassan', 700);
-  print(teacher1 == teacher2); // => true operator overiding
+/*
+define method called divisionProccess and make it recives two int parameters
+ensure that the code will handle any exception in your code
+
+*/
+
+
+
+  int num1 = 100;
+  int num2 = 0;
+  try {
+    var result = 100 ~/ 0;
+    print(result);
+  } on IOException catch(e){
+     print('INPUT OUTPUT EXCPTION');
+  }catch(e){
+     print('general error');
+  }
+
+  print('hello students');
+
+  // GeneralClass generalClass = GeneralClass();
+  // Human human1 = Human();
+  // Human human2 = Human();
+  // human1.name = 'omar';
+  // human2.name = 'omar';
+  // human1.age = 10.0;
+  // human2.age = 9.0;
+  // print(human1 > human2);
+
+  /*
+handle with MangmentClass as Mixin in student class 
+  */
+  /*
+define new class called MangmentClass and define dummy attributes in it
+make student class implements MangmentClass and override all its attributes
+make an instance from student
+
+  */
+
+  // Student student = Student.fromMap({
+  //   "first_name": "shaker",
+  //   "last_name": "ahmed",
+  //   "isMale": true,
+  //   "age": 8.5,
+  //   "gpa": 99
+  // });
+  // Teacher teacher1 = Teacher('ahmed', 'hassan', 700);
+  // Teacher teacher2 = Teacher('ahmed', 'hassan', 700);
+  // print(teacher1 == teacher2); // => true operator overiding
 
 /*
 define abstract method in student class called getHomework
